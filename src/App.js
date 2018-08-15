@@ -1,5 +1,6 @@
 // libraries
 import React, { Component } from 'react';
+import ExecuteCode from './components/ExecuteCode';
 import CodeMirror from 'react-codemirror';
 import './App.css';
 
@@ -71,6 +72,7 @@ class App extends Component {
           onCursorActivity={ this.onCursorMove }
           options={ options }
         />
+        <ExecuteCode code={ code } />
         <p>Editing mode: <span>{ options.mode }</span></p>
         <p>Full input: <span>{ code }</span></p>
         <br />
